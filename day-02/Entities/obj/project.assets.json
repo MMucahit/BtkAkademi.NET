@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\zafer\\.nuget\\packages\\": {}
+    "C:\\Users\\MMucahitNAS\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\dotnetmvcbootcamp\\day-02\\Entities\\Entities.csproj",
+      "projectUniqueName": "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\day-02\\Entities\\Entities.csproj",
       "projectName": "Entities",
-      "projectPath": "D:\\dotnetmvcbootcamp\\day-02\\Entities\\Entities.csproj",
-      "packagesPath": "C:\\Users\\zafer\\.nuget\\packages\\",
-      "outputPath": "D:\\dotnetmvcbootcamp\\day-02\\Entities\\obj\\",
+      "projectPath": "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\day-02\\Entities\\Entities.csproj",
+      "packagesPath": "C:\\Users\\MMucahitNAS\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\day-02\\Entities\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\zafer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\MMucahitNAS\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -51,7 +51,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -60,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.111\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

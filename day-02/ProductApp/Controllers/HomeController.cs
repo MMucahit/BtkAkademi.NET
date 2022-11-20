@@ -10,7 +10,7 @@ public class HomeController : Controller
     public IActionResult Index()
     {
        
-        string msg = "Dünya erkek günü kutlu olsun.";
+        string msg = "Hello World!";
         return View("Index",msg);
     }
 

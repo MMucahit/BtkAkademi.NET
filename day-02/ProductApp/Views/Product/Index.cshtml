@@ -3,7 +3,7 @@
 @foreach(var prd in Model)
 {
     <div class="text-center">
-        <h3>@prd.ProductName</h3>
-        <p>@prd.Price.ToString("c")</p>
+        <h3>@prd.Name</h3>
+        <p>@prd.Price.ToString()</p>
     </div>
 }

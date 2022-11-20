@@ -9,7 +9,7 @@ namespace Entities.Models
     public class Product
     {
         public int Id { get; set; } // property default : 0
-        public String? ProductName { get; set; } // default : null
+        public String? Name { get; set; } // default : null
         public Decimal Price { get; set; }  // default: 0
 
         public Product()
@@ -17,10 +17,10 @@ namespace Entities.Models
 
         }
 
-        public Product(int id, string productName, decimal price)
+        public Product(int id, string name, decimal price)
         {
             Id = id;
-            ProductName = productName;
+            Name = name;
             Price = price;
         }
     }
