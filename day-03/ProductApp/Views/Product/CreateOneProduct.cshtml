@@ -1,0 +1,24 @@
+﻿@model Product
+
+<form asp-action="CreateOneProduct" asp-controller="Product" method="post">
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Name</label>
+        <input type="text" class="form-control" id="InputName" asp-for="Name" aria-describedby="Name is required" placeholder="Enter Name">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Price</label>
+        <input type="text" class="form-control" id="InputPrice" asp-for="Price" aria-describedby="Price should be interger" placeholder="Enter Price">
+    </div>
+        <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Description</label>
+        <input type="text" class="form-control" id="InputDescription" asp-for="Description" aria-describedby="Description shouldn't required" placeholder="Enter Description">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">ImageUrl</label>
+        <input type="text" class="form-control" id="InputImageUrl" asp-for="ImageUrl" aria-describedby="ImageUrl shouldn't required" placeholder="Enter ImageUrl">
+    </div>
+
+    <button class="btn btn-primary" type="submit">
+        Create Product
+    </button>
+</form>
