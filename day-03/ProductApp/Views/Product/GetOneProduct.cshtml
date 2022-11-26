@@ -26,6 +26,10 @@
                 <div class="row text-danger">@Model.Price.ToString("c")</div>
                 <div class="row text-danger">@Model.Description</div>
                 <div class="row text-danger">@Model.AtCreated.Value.ToString("d")</div>
+                <form asp-action="DeleteOneProduct" asp-controller="Product" method="post">
+                    <button class="btn btn-warning" type="submit">Delete</button>
+                    <input type="hidden" id="Id" asp-for="Id">
+                </form>
                 </div>
             </div>
         </div>

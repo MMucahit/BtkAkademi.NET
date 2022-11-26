@@ -50,5 +50,14 @@ namespace ProductApp.Controllers
             _context.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        [HttpPost]
+        public IActionResult DeleteOneProduct(int id)
+        {
+            Product deletedProduct = _context.Products.SingleOrDefault(p => p.Id == id);
+            _context.Remove(deletedProduct);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
