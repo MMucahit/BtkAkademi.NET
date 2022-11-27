@@ -3,7 +3,6 @@ using Repositories.EFCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
 builder.Services.AddControllersWithViews();
 // IoC
 builder.Services.AddDbContext<RepositoryContext>

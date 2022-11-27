@@ -1,0 +1,16 @@
+﻿@model Category
+
+<div class="row">
+        <div class="card mx-auto" style="width: 18rem;">
+        <img src="~/images/products/1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <div>
+                <div class="row">
+                        <a asp-controller="Category" asp-action="GetOneCategory" asp-route-id=@Model.CategoryId>@Model.Name</a>
+                </div>
+                <div class="row text-danger">@Model.Name</div>
+                <div class="row text-danger">@Model.Description</div>
+                </div>
+            </div>
+        </div>
+</div>

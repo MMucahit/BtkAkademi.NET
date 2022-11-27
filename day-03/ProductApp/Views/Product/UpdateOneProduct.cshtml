@@ -1,0 +1,43 @@
+﻿@model Product
+
+<form asp-action="UpdateOneProduct" asp-controller="Product" method="post">
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Id</label>
+        <input type="text" class="form-control" id="InputId" asp-for="Id" aria-describedby="Id is required" placeholder="Enter Name">
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Name</label>
+        <input type="text" class="form-control" id="InputName" asp-for="Name" aria-describedby="Name is required" placeholder="Enter Name">
+        <small id="NameHelp" class="form-text text-muted">Category Name is required!</small>
+        <span class="text-danger" asp-validation-for="Name"></span>
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Price</label>
+        <input type="text" class="form-control" id="InputDescription" asp-for="Price" aria-describedby="Description shouldn't required" placeholder="Enter Description">
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Description</label>
+        <input type="text" class="form-control" id="InputDescription" asp-for="Description" aria-describedby="Description shouldn't required" placeholder="Enter Description">
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">ImageUrl</label>
+        <input type="text" class="form-control" id="InputDescription" asp-for="ImageUrl" aria-describedby="Description shouldn't required" placeholder="Enter Description">
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">AtCreated</label>
+        <input type="text" class="form-control" id="InputDescription" asp-for="AtCreated" aria-describedby="Description shouldn't required" placeholder="Enter Description">
+    </div>
+
+    <button class="btn btn-primary" type="submit">
+        Update Product
+    </button>
+</form>
+
+
