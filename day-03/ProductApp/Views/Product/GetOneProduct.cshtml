@@ -21,16 +21,13 @@
             <div class="card-body">
                 <div>
                 <div class="row">
-                    <a asp-controller="Product" asp-action="GetOneProduct" asp-route-id=@Model.Id>@Model.Name</a>
+                        <a asp-controller="Product" asp-action="GetOneProduct" asp-route-id=@Model.Id>@Model.Name</a>
                 </div>
-                <div class="row text-danger">@Model.Name</div>
+                <div class="row text-danger">@Model.Price.ToString("c")</div>
                 <div class="row text-danger">@Model.Description</div>
+                <div class="row text-danger">@Model.AtCreated.Value.ToString("d")</div>
                 <form asp-action="DeleteOneProduct" asp-controller="Product" method="post">
                     <button class="btn btn-warning" type="submit">Delete</button>
-                    <input type="hidden" id="Id" asp-for="Id">
-                </form>
-                <form asp-action="UpdateOneProduct" asp-controller="Product" method="get">
-                    <button class="btn btn-secondary" type="submit">Update</button>
                     <input type="hidden" id="Id" asp-for="Id">
                 </form>
                 </div>

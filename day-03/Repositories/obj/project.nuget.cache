@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "InU1y7TPKTmliLjU340IHifEl1qbxbCt2JBHVBpMDdo0nY/aeODA2Nvkg8KJ0kUztj40hrwraKFZLg/QVC+IdA==",
+  "dgSpecHash": "135B5mfqGXl7e76pGkzllccWzIZNUWG5WWJQsUcjk9nvNyPCuEDP1s7UF3t74hDLVXijZr1ciuQvy8WlDvBHFQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\day-03\\Repositories\\Repositories.csproj",
+  "projectFilePath": "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\day-04\\Repositories\\Repositories.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MMucahitNAS\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\MMucahitNAS\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

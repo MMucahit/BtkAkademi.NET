@@ -1,18 +1,13 @@
 ﻿@model Product
 
 <form asp-action="CreateOneProduct" asp-controller="Product" method="post">
-    <div asp-validation-summary="All" class="text-danger"></div>
     <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Name</label>
         <input type="text" class="form-control" id="InputName" asp-for="Name" aria-describedby="Name is required" placeholder="Enter Name">
-        <small id="NameHelp" class="form-text text-muted">Product Name is required!</small>
-        <span class="text-danger" asp-validation-for="Name"></span>
     </div>
     <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Price</label>
         <input type="text" class="form-control" id="InputPrice" asp-for="Price" aria-describedby="Price should be interger" placeholder="Enter Price">
-        <small id="PriceHelp" class="form-text text-muted">Price is required!</small>
-        <span class="text-danger" asp-validation-for="Price"></span>
     </div>
         <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Description</label>

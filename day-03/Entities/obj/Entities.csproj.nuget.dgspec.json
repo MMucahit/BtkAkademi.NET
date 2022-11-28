@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\day-03\\Entities\\Entities.csproj": {}
+    "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\day-04\\Entities\\Entities.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\day-03\\Entities\\Entities.csproj": {
+    "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\day-04\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\day-03\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\day-04\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\day-03\\Entities\\Entities.csproj",
+        "projectPath": "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\day-04\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\MMucahitNAS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\day-03\\Entities\\obj\\",
+        "outputPath": "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\day-04\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MMucahitNAS\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -16,6 +16,26 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\MMucahitNAS\Desktop\.Net\day-03\ProductApp
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/MMucahitNAS/Desktop/.Net/day-03/ProductApp/Views/Category/CreateOneCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcQ3JlYXRlT25lQ2F0ZWdvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MMucahitNAS/Desktop/.Net/day-03/ProductApp/Views/Category/GetOneCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcR2V0T25lQ2F0ZWdvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MMucahitNAS/Desktop/.Net/day-03/ProductApp/Views/Category/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MMucahitNAS/Desktop/.Net/day-03/ProductApp/Views/Category/RandomCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcUmFuZG9tQ2F0ZWdvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MMucahitNAS/Desktop/.Net/day-03/ProductApp/Views/Category/UpdateOneCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcVXBkYXRlT25lQ2F0ZWdvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/MMucahitNAS/Desktop/.Net/day-03/ProductApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -38,6 +58,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/MMucahitNAS/Desktop/.Net/day-03/ProductApp/Views/Product/RandomProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxSYW5kb21Qcm9kdWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MMucahitNAS/Desktop/.Net/day-03/ProductApp/Views/Product/UpdateOneProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxVcGRhdGVPbmVQcm9kdWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/MMucahitNAS/Desktop/.Net/day-03/ProductApp/Views/Shared/Error.cshtml]

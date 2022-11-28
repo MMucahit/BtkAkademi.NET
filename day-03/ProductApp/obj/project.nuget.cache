@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "K9FcnTjOBC1ESVJe4tjVlEr4YdJGSrd6EowQGr5yyWXtEJE5zP36x7E9L6NG/hcTEnG11YBVfMzpKQbpl5i9aw==",
+  "dgSpecHash": "2OqaBEmW4FrSnRL4xM4Ca5GFY7CsMFPx2yPhMukUgOkeIEb23O5jmtKAUPTAq6/3bN1HkjztnEvtNLF9ullCHw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\day-03\\ProductApp\\ProductApp.csproj",
+  "projectFilePath": "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\day-04\\ProductApp\\ProductApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MMucahitNAS\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\MMucahitNAS\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

@@ -1,6 +1,7 @@
 ﻿using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
 using Repositories.EFCore;
+using System.Linq;
 
 namespace ProductApp.Controllers
 {
@@ -11,7 +12,7 @@ namespace ProductApp.Controllers
 
         public ProductController(RepositoryContext context)
         {
-            _context = context;
+            _context = context;  
         }
         //
 
@@ -21,7 +22,7 @@ namespace ProductApp.Controllers
             return View("Index", products);
         }
 
-        public IActionResult RandomProduct()
+        public IActionResult RandomProduct() 
         {
             Random random = new Random();
             int randomNumber = random.Next(1, _context.Products.ToList().Count + 1);
@@ -33,7 +34,7 @@ namespace ProductApp.Controllers
         public IActionResult GetOneProduct(int id)
         {
             var product = _context.Products.SingleOrDefault(p => p.Id == id);
-            return View("GetOneProduct", product);
+            return View("GetOneProduct",product);
         }
 
         [HttpGet]
@@ -43,17 +44,11 @@ namespace ProductApp.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult CreateOneProduct(Product product)
+        public IActionResult CreateOneProduct(Product product) 
         {
-            if (ModelState.IsValid)
-            {
-                _context.Add(product);
-                _context.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View("CreateOneProduct");
-
+            _context.Add(product);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
         }
 
         [HttpPost]
@@ -63,25 +58,6 @@ namespace ProductApp.Controllers
             _context.Remove(deletedProduct);
             _context.SaveChanges();
             return RedirectToAction("Index");
-        }
-
-        [HttpGet]
-        public IActionResult UpdateOneProduct(int id)
-        {
-            Product product = _context.Products.SingleOrDefault(p => p.Id == id);
-            return View("UpdateOneProduct", product);
-        }
-
-        [HttpPost]
-        public IActionResult UpdateOneProduct(Product updatedProduct)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Update(updatedProduct);
-                _context.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View("UpdateOneProduct");
         }
     }
 }
