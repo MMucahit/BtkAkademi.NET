@@ -2016,11 +2016,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\day-03\\ProductApp\\ProductApp.csproj",
+      "projectUniqueName": "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\day-04\\ProductApp\\ProductApp.csproj",
       "projectName": "ProductApp",
-      "projectPath": "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\day-03\\ProductApp\\ProductApp.csproj",
+      "projectPath": "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\day-04\\ProductApp\\ProductApp.csproj",
       "packagesPath": "C:\\Users\\MMucahitNAS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\day-03\\ProductApp\\obj\\",
+      "outputPath": "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\day-04\\ProductApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\MMucahitNAS\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2037,11 +2037,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\day-03\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\day-03\\Entities\\Entities.csproj"
+            "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\day-04\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\day-04\\Entities\\Entities.csproj"
             },
-            "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\day-03\\Repositories\\Repositories.csproj": {
-              "projectPath": "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\day-03\\Repositories\\Repositories.csproj"
+            "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\day-04\\Repositories\\Repositories.csproj": {
+              "projectPath": "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\day-04\\Repositories\\Repositories.csproj"
             }
           }
         }

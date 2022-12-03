@@ -37,54 +37,5 @@ public class CategoryController : Controller
         var category = _context.Categories.SingleOrDefault(p => p.CategoryId == id);
         return View("GetOneCategory", category);
     }
-
-    [HttpGet]
-    public IActionResult CreateOneCategory()
-    {
-        return View("CreateOneCategory");
-    }
-
-    [HttpPost]
-    [ValidateAntiForgeryToken]
-    public IActionResult CreateOneCategory(Category category)
-    {
-        if (ModelState.IsValid)
-        {
-            _context.Add(category);
-            _context.SaveChanges();
-            return RedirectToAction("Index");
-        }
-        return View("CreateOneCategory");
-
-    }
-
-    [HttpPost]
-    public IActionResult DeleteOneCategory(int id)
-    {
-        Category deletedCategory = _context.Categories.SingleOrDefault(c => c.CategoryId == id);
-        _context.Remove(deletedCategory);
-        _context.SaveChanges();
-        return RedirectToAction("Index");
-    }
-
-    [HttpGet]
-    public IActionResult UpdateOneCategory(int id)
-    {
-        Category category = _context.Categories.SingleOrDefault(p => p.CategoryId == id);
-        return View("UpdateOneCategory", category);
-    }
-
-    [HttpPost]
-    public IActionResult UpdateOneCategory(Category updatedCategory)
-    {
-        if (ModelState.IsValid)
-        {
-            _context.Update(updatedCategory);
-            _context.SaveChanges();
-            return RedirectToAction("Index");
-        }
-        return View("UpdateOneCategory");
-    }
-
 }
 

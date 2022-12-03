@@ -1,11 +1,6 @@
 ﻿using Entities.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Repositories.EFCore.Config
 {
@@ -21,22 +16,22 @@ namespace Repositories.EFCore.Config
             builder.HasData(
                 new Product()
                 {
-                    Id= 1,
+                    Id = 1,
                     Name = "HP ZBook",
                     Price = 17_000,
 
                 },
                 new Product()
                 {
-                    Id= 2,
-                    Name= "AirPods",
+                    Id = 2,
+                    Name = "AirPods",
                     Price = 5_000,
                 },
                 new Product()
                 {
-                   Id= 3,
-                   Name= "Samsun Galaxy Note FE",
-                   Price = 7_000,
+                    Id = 3,
+                    Name = "Samsun Galaxy Note FE",
+                    Price = 7_000,
                 }
                 );
         }

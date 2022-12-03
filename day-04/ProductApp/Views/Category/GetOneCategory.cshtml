@@ -11,16 +11,6 @@
                     </div>
                     <div class="row text-danger">@Model.Name</div>
                     <div class="row text-danger">@Model.Description</div>
-
-                    <form asp-action="DeleteOneCategory" asp-route-id="@Model.CategoryId" asp-controller="Category" method="post">
-                        <button class="btn btn-warning" type="submit">Delete</button>
-                    <input type="hidden" id="CategoryId" asp-for="CategoryId">
-                    </form>
-
-                    <form asp-action="UpdateOneCategory" asp-route-id="@Model.CategoryId" asp-controller="Category" method="get">
-                        <button class="btn btn-secondary" type="submit">Update</button>
-                        <input type="hidden" id="CategoryId" asp-for="CategoryId">
-                    </form>
                 </div>
             </div>
         </div>

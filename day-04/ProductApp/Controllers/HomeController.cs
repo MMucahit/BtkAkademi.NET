@@ -1,6 +1,4 @@
-﻿using System.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
-using ProductApp.Models;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace ProductApp.Controllers;
 
@@ -9,9 +7,9 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-       
+
         string msg = "Hello World!";
-        return View("Index",msg);
+        return View("Index", msg);
     }
 
     public IActionResult Privacy()
@@ -19,7 +17,7 @@ public class HomeController : Controller
         return View();
     }
 
-   
 
-    
+
+
 }

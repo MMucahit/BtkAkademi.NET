@@ -1,11 +1,6 @@
 ﻿using Entities.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Repositories.EFCore.Config
 {
@@ -19,7 +14,7 @@ namespace Repositories.EFCore.Config
             builder.HasData(
                 new Category()
                 {
-                    CategoryId= 1,
+                    CategoryId = 1,
                     Name = "Books",
                     Description = "This is a book category"
 
@@ -27,14 +22,14 @@ namespace Repositories.EFCore.Config
                 new Category()
                 {
                     CategoryId = 2,
-                    Name= "Electronics",
+                    Name = "Electronics",
                     Description = "This is a electronics category"
                 },
                 new Category()
                 {
-                   CategoryId = 3,
-                   Name= "Smart Phone",
-                   Description = "This is a Smart Phone category"
+                    CategoryId = 3,
+                    Name = "Smart Phone",
+                    Description = "This is a Smart Phone category"
                 }
                 );
         }

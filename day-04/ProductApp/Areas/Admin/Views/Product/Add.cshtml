@@ -1,6 +1,6 @@
 ﻿@model Product
 
-<form asp-action="CreateOneProduct" asp-controller="Product" method="post">
+<form asp-area="Admin" asp-action="Add" asp-controller="Product" method="post">
     <div asp-validation-summary="All" class="text-danger"></div>
     <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Name</label>

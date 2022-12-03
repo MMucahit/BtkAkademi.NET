@@ -14,7 +14,6 @@ namespace ProductApp.Controllers
             _context = context;
         }
         //
-
         public IActionResult Index()
         {
             var products = _context.Products.ToList();
@@ -34,54 +33,6 @@ namespace ProductApp.Controllers
         {
             var product = _context.Products.SingleOrDefault(p => p.Id == id);
             return View("GetOneProduct", product);
-        }
-
-        [HttpGet]
-        public IActionResult CreateOneProduct()
-        {
-            return View("CreateOneProduct");
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult CreateOneProduct(Product product)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(product);
-                _context.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View("CreateOneProduct");
-
-        }
-
-        [HttpPost]
-        public IActionResult DeleteOneProduct(int id)
-        {
-            Product deletedProduct = _context.Products.SingleOrDefault(p => p.Id == id);
-            _context.Remove(deletedProduct);
-            _context.SaveChanges();
-            return RedirectToAction("Index");
-        }
-
-        [HttpGet]
-        public IActionResult UpdateOneProduct(int id)
-        {
-            Product product = _context.Products.SingleOrDefault(p => p.Id == id);
-            return View("UpdateOneProduct", product);
-        }
-
-        [HttpPost]
-        public IActionResult UpdateOneProduct(Product updatedProduct)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Update(updatedProduct);
-                _context.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View("UpdateOneProduct");
         }
     }
 }
