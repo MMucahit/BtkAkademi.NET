@@ -1,5 +1,8 @@
-﻿using Entities.Models;
+﻿using AutoMapper;
+using Entities.DataTransferObjects;
+using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Repositories.EFCore;
 
 namespace ProductApp.Areas.Admin.Controllers
@@ -9,10 +12,13 @@ namespace ProductApp.Areas.Admin.Controllers
     {
         // Dependency Injection
         private readonly RepositoryContext _context;
+        private readonly IMapper _mapper;
 
-        public ProductController(RepositoryContext context)
+        public ProductController(RepositoryContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
+
         }
         //
 
@@ -28,12 +34,15 @@ namespace ProductApp.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult Add()
         {
+            ViewBag.Categories = new SelectList(_context.Categories.ToList(),"CategoryId","Name");
             return View("Add");
         }
 
         [HttpPost]
-        public IActionResult Add(Product product)
+        public IActionResult Add(ProductForInsertionDto productDto)
         {
+            var product = _mapper.Map<Product>(productDto);
+
             if (ModelState.IsValid)
             {
                 _context.Add(product);
@@ -61,16 +70,19 @@ namespace ProductApp.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult Update(int id)
         {
+            ViewBag.Categories = new SelectList(_context.Categories.ToList(), "CategoryId", "Name");
             Product product = _context.Products.SingleOrDefault(p => p.Id == id);
             return View("Update", product);
         }
 
         [HttpPost]
-        public IActionResult Update(Product updatedProduct)
+        public IActionResult Update(ProductForUpdateDto updatedProduct)
         {
+            var product = _mapper.Map<Product>(updatedProduct);
+
             if (ModelState.IsValid)
             {
-                _context.Update(updatedProduct);
+                _context.Update(product);
                 _context.SaveChanges();
 
                 TempData["update"] = "Products have been updated!";

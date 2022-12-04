@@ -8,6 +8,10 @@ builder.Services.AddControllersWithViews();
 builder.Services.ConfigureDbContext(builder.Configuration);
 //
 
+// AutoMapper
+builder.Services.AddAutoMapper(typeof(Program));
+//
+
 // IoC => builder.Services.Configuration olarak method haline getirdik.
 //builder.Services.AddDbContext<RepositoryContext>
 //    (options => options.UseSqlServer

@@ -1,4 +1,5 @@
-﻿using Entities.Models;
+﻿using AutoMapper;
+using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
 using Repositories.EFCore;
 
@@ -14,6 +15,7 @@ namespace ProductApp.Controllers
             _context = context;
         }
         //
+
         public IActionResult Index()
         {
             var products = _context.Products.ToList();

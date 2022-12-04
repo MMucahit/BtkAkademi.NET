@@ -19,6 +19,7 @@ namespace Repositories.EFCore.Config
                     Id = 1,
                     Name = "HP ZBook",
                     Price = 17_000,
+                    CategoryId = 1,
 
                 },
                 new Product()
@@ -26,12 +27,14 @@ namespace Repositories.EFCore.Config
                     Id = 2,
                     Name = "AirPods",
                     Price = 5_000,
+                    CategoryId = 2,
                 },
                 new Product()
                 {
                     Id = 3,
                     Name = "Samsun Galaxy Note FE",
                     Price = 7_000,
+                    CategoryId = 3,
                 }
                 );
         }

@@ -78,6 +78,9 @@ namespace Repositories.Migrations
                         .HasColumnType("datetime2")
                         .HasDefaultValueSql("GETDATE()");
 
+                    b.Property<int?>("CategoryId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Description")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("nvarchar(max)")
@@ -97,27 +100,46 @@ namespace Repositories.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CategoryId");
+
                     b.ToTable("Products");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
+                            CategoryId = 1,
                             Name = "HP ZBook",
                             Price = 17000m
                         },
                         new
                         {
                             Id = 2,
+                            CategoryId = 2,
                             Name = "AirPods",
                             Price = 5000m
                         },
                         new
                         {
                             Id = 3,
+                            CategoryId = 3,
                             Name = "Samsun Galaxy Note FE",
                             Price = 7000m
                         });
+                });
+
+            modelBuilder.Entity("Entities.Models.Product", b =>
+                {
+                    b.HasOne("Entities.Models.Category", "Category")
+                        .WithMany("Products")
+                        .HasForeignKey("CategoryId");
+
+                    b.Navigation("Category");
+                });
+
+            modelBuilder.Entity("Entities.Models.Category", b =>
+                {
+                    b.Navigation("Products");
                 });
 #pragma warning restore 612, 618
         }

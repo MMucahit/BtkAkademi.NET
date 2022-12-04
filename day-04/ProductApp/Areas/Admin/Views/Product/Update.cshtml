@@ -35,6 +35,11 @@
         <input type="text" class="form-control" id="InputDescription" asp-for="AtCreated" aria-describedby="Description shouldn't required" placeholder="Enter Description">
     </div>
 
+    <div class="form-group">
+        <label for="CategoryId">Category</label>
+        <select class="form-control" asp-for="CategoryId" asp-items="@ViewBag.Categories"></select>
+    </div>
+
     <button class="btn btn-primary" type="submit">
         Update Product
     </button>

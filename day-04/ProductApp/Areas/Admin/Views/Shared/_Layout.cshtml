@@ -38,39 +38,35 @@
     <div class="container">
         <main role="main" class="pb-3">
 
-            <div class="alert alert-success alert-dismissible">
-                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                <strong>Success!</strong> This alert box could indicate a successful or positive action.
-            </div>
-            <div class="alert alert-info alert-dismissible">
-                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                <strong>Info!</strong> This alert box could indicate a neutral informative change or action.
-            </div>
-
             @if (TempData["list"] != null)
             {
-                <div class="alert alert-primary" role="alert">
+                <div class="alert alert-primary alert-dismissible" role="alert">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                     @TempData["list"]
                 </div>
             }
 
             @if (TempData["add"] != null)
             {
-                <div class="alert alert-success" role="alert">
+                <div class="alert alert-success alert-dismissible" role="alert">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+
                     @TempData["add"]
                 </div>
             }
 
             @if (TempData["delete"] != null)
             {
-                <div class="alert alert-danger" role="alert">
+                <div class="alert alert-danger alert-dismissible" role="alert">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                     @TempData["delete"]
                 </div>
             }
 
             @if (TempData["update"] != null)
             {
-                <div class="alert alert-secondary" role="alert">
+                <div class="alert alert-secondary alert-dismissible" role="alert">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                     @TempData["update"]
                 </div>
             }

@@ -278,3 +278,5 @@ C:\Users\MMucahitNAS\Desktop\.Net\day-04\ProductApp\obj\Debug\net6.0\ProductApp.
 C:\Users\MMucahitNAS\Desktop\.Net\day-04\ProductApp\obj\Debug\net6.0\ProductApp.genruntimeconfig.cache
 C:\Users\MMucahitNAS\Desktop\.Net\day-04\ProductApp\obj\Debug\net6.0\ref\ProductApp.dll
 C:\Users\MMucahitNAS\Desktop\.Net\day-04\ProductApp\obj\Debug\net6.0\scopedcss\Areas\Admin\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\MMucahitNAS\Desktop\.Net\day-04\ProductApp\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\MMucahitNAS\Desktop\.Net\day-04\ProductApp\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

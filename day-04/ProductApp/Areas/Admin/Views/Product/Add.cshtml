@@ -1,4 +1,4 @@
-﻿@model Product
+﻿@model ProductForInsertionDto
 
 <form asp-area="Admin" asp-action="Add" asp-controller="Product" method="post">
     <div asp-validation-summary="All" class="text-danger"></div>
@@ -14,13 +14,18 @@
         <small id="PriceHelp" class="form-text text-muted">Price is required!</small>
         <span class="text-danger" asp-validation-for="Price"></span>
     </div>
-        <div class="mb-3">
+    <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Description</label>
         <input type="text" class="form-control" id="InputDescription" asp-for="Description" aria-describedby="Description shouldn't required" placeholder="Enter Description">
     </div>
     <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">ImageUrl</label>
         <input type="text" class="form-control" id="InputImageUrl" asp-for="ImageUrl" aria-describedby="ImageUrl shouldn't required" placeholder="Enter ImageUrl">
+    </div>
+
+    <div class="form-group">
+        <label for="CategoryId">Category</label>
+        <select class="form-control" asp-for="CategoryId" asp-items="@ViewBag.Categories"></select>
     </div>
 
     <button class="btn btn-primary" type="submit">

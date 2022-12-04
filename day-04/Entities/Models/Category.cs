@@ -9,6 +9,9 @@ namespace Entities.Models
         public string Name { get; set; }
         public string Description { get; set; }
 
+        // Collection Navigation Property
+        public ICollection<Product> Products { get; set; }
+
         public Category(int categoryId, string name, string description)
         {
             CategoryId = categoryId;
