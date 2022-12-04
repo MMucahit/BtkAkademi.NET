@@ -1,4 +1,7 @@
+using Microsoft.Extensions.Configuration;
 using ProductApp.Extensions;
+using Repositories.Abstracts;
+using Repositories.EFCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +9,10 @@ builder.Services.AddControllersWithViews();
 
 //Configuration for AddDbConext =>> IoC
 builder.Services.ConfigureDbContext(builder.Configuration);
+//
+
+// Dependency Injection for ProductRepository
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
 //
 
 // AutoMapper

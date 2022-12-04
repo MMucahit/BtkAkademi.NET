@@ -37,43 +37,10 @@
     </header>
     <div class="container">
         <main role="main" class="pb-3">
-
-            @if (TempData["list"] != null)
-            {
-                <div class="alert alert-primary alert-dismissible" role="alert">
-                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    @TempData["list"]
-                </div>
-            }
-
-            @if (TempData["add"] != null)
-            {
-                <div class="alert alert-success alert-dismissible" role="alert">
-                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-
-                    @TempData["add"]
-                </div>
-            }
-
-            @if (TempData["delete"] != null)
-            {
-                <div class="alert alert-danger alert-dismissible" role="alert">
-                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    @TempData["delete"]
-                </div>
-            }
-
-            @if (TempData["update"] != null)
-            {
-                <div class="alert alert-secondary alert-dismissible" role="alert">
-                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    @TempData["update"]
-                </div>
-            }
+            <partial name="_Notification"/>
             @RenderBody()
         </main>
     </div>
-
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2022 - ProductApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
@@ -82,8 +49,6 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-
-
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

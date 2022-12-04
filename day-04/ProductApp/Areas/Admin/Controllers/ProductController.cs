@@ -34,7 +34,7 @@ namespace ProductApp.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult Add()
         {
-            ViewBag.Categories = new SelectList(_context.Categories.ToList(),"CategoryId","Name");
+            ViewBag.Categories = new SelectList(_context.Categories.ToList(), "CategoryId", "Name");
             return View("Add");
         }
 

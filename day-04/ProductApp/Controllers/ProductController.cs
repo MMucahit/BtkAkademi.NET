@@ -1,6 +1,6 @@
-﻿using AutoMapper;
-using Entities.Models;
+﻿using Entities.RequestParameters;
 using Microsoft.AspNetCore.Mvc;
+using Repositories.Abstracts;
 using Repositories.EFCore;
 
 namespace ProductApp.Controllers
@@ -8,33 +8,31 @@ namespace ProductApp.Controllers
     public class ProductController : Controller
     {
         // Dependency Injection
-        private readonly RepositoryContext _context;
+        private readonly IProductRepository _productDal;
 
-        public ProductController(RepositoryContext context)
+        public ProductController(IProductRepository productDal)
         {
-            _context = context;
+            _productDal = productDal;
         }
         //
 
         public IActionResult Index()
         {
-            var products = _context.Products.ToList();
+            var products = _productDal.GetAll();
             return View("Index", products);
-        }
-
-        public IActionResult RandomProduct()
-        {
-            Random random = new Random();
-            int randomNumber = random.Next(1, _context.Products.ToList().Count + 1);
-            var product = _context.Products.SingleOrDefault(p => p.Id == randomNumber);
-
-            return product != null ? View("RandomProduct", product) : RandomProduct();
         }
 
         public IActionResult GetOneProduct(int id)
         {
-            var product = _context.Products.SingleOrDefault(p => p.Id == id);
+            var product = _productDal.GetById(id);
             return View("GetOneProduct", product);
+        }
+
+        [HttpPost]
+        public IActionResult Search(ProductRequestParameters search)
+        {
+            var product = _productDal.Search(search);
+            return View("Search",product);
         }
     }
 }
