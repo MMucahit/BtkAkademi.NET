@@ -1,0 +1,35 @@
+﻿@model List<Category>
+
+<!--
+    <div class="form-group">
+    <label for="">CategoryId</label>
+    <select class="form-control" id="">
+@foreach (var cat in Model)
+{
+                            <option>@cat.CategoryId</option>
+}
+    </select>
+</div>
+-->
+<!--
+<ul class="list-group">
+@foreach (Category cat in Model)
+{
+    <li class="list-group-item">
+        <a asp-controller="Product" asp-action="CategoryDetail" asp-route-id=@cat.CategoryId>@cat.Name</a>
+    </li>
+}
+</ul>
+-->
+
+<div class="list-group">
+    @foreach (var cat in Model)
+    {
+        <a asp-controller="Product" 
+        asp-action="CategoryDetail" 
+        asp-route-id=@cat.CategoryId 
+        type="button" 
+        class="list-group-item list-group-item-action"
+        >@cat.Name</a>
+    }
+</div>
