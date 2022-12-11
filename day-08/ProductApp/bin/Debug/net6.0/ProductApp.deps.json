@@ -476,6 +476,7 @@
       },
       "Services/1.0.0": {
         "dependencies": {
+          "AutoMapper": "12.0.0",
           "Entities": "1.0.0",
           "Repositories": "1.0.0"
         },

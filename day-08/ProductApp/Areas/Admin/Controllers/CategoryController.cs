@@ -1,23 +1,23 @@
 ﻿using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
 using Repositories.Contracts;
-using Repositories.EFCore;
+using Services.Contracts;
 
 namespace ProductApp.Areas.Admin.Controllers
 {
     [Area("Admin")]
     public class CategoryController : Controller
     {
-        private readonly IRepositoryManager _manager;
+        private readonly IServiceManager _manager;
 
-        public CategoryController(IRepositoryManager manager)
+        public CategoryController(IServiceManager manager)
         {
             _manager = manager;
         }
 
         public IActionResult Index()
         {
-            var categories = _manager.Category.GetAllCategories();  
+            var categories = _manager.CategoryService.GetAllCategories();
             return View(categories);
         }
 
@@ -36,8 +36,7 @@ namespace ProductApp.Areas.Admin.Controllers
 
             if (ModelState.IsValid)
             {
-                _manager.Category.Create(category);
-                _manager.Save();
+                _manager.CategoryService.Create(category);
                 return RedirectToAction("Index");
             }
             return View();
@@ -46,7 +45,7 @@ namespace ProductApp.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult UpdateOneCategory(int id)
         {
-            var category = _manager.Category.GetOneCategoryById(id);
+            var category = _manager.CategoryService.GetOneCategoryById(id);
             return View(category);
         }
 
@@ -60,8 +59,7 @@ namespace ProductApp.Areas.Admin.Controllers
 
             if (ModelState.IsValid)
             {
-                _manager.Category.Update(category);
-                _manager.Save();
+                _manager.CategoryService.Update(category);
                 return RedirectToAction("Index");
             }
 
@@ -72,8 +70,7 @@ namespace ProductApp.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult DeleteOneCategory(int id)
         {
-            _manager.Category.Delete(new Category { CategoryId = id });
-            _manager.Save();
+            _manager.CategoryService.Delete(id);
             return RedirectToAction("Index");
         }
     }

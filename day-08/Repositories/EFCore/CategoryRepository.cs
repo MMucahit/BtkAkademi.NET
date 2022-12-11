@@ -7,14 +7,14 @@ namespace Repositories.EFCore
     {
         public CategoryRepository(RepositoryContext context) : base(context)
         {
-            
+
         }
 
         public IEnumerable<Category> GetAllCategories() => FindAll();
-        
 
-        public Category GetOneCategoryById(int id) =>       
+
+        public Category GetOneCategoryById(int id) =>
             FindById(c => c.CategoryId.Equals(id));
-        
+
     }
 }

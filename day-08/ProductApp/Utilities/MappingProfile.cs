@@ -10,7 +10,7 @@ namespace ProductApp.Utilities
         {
             CreateMap<ProductForInsertionDto, Product>();
             CreateMap<ProductForUpdateDto, Product>().ReverseMap();
-         
+
         }
     }
 }

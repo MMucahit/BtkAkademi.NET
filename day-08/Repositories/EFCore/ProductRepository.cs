@@ -1,20 +1,21 @@
 ﻿using Entities.Models;
 using Entities.RequestParameters;
+using Microsoft.EntityFrameworkCore;
 using Repositories.Contracts;
 using Repositories.EFCore.Extensions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Repositories.EFCore
 {
     public class ProductRepository : RepositoryBase<Product>, IProductRepository
     {
-        public ProductRepository(RepositoryContext context) 
+        public ProductRepository(RepositoryContext context)
             : base(context)
         {
+        }
+
+        public IEnumerable<Product> GeAllProductWithDetail()
+        {
+            return _context.Products.Include(p => p.Category).ToList();
         }
 
         public IEnumerable<Product> GetAllProducts() =>
@@ -24,7 +25,7 @@ namespace Repositories.EFCore
         {
             return _context
                  .Products
-                 .FilterProducts(p.MinPrice,p.MaxPrice)
+                 .FilterProducts(p.MinPrice, p.MaxPrice)
                  .Search(p.SearchTerm)
                  .ToList();
         }

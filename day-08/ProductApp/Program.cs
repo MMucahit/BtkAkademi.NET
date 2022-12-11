@@ -1,9 +1,4 @@
-using Microsoft.EntityFrameworkCore;
 using ProductApp.Extensions;
-using Repositories.Contracts;
-using Repositories.EFCore;
-using Services;
-using Services.Contracts;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -33,17 +28,17 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-app.UseEndpoints(endpoints=>
+app.UseEndpoints(endpoints =>
 {
     endpoints.MapAreaControllerRoute(
-        name:"Admin",
-        areaName:"Admin",
-        pattern:"Admin/{controller=Home}/{action=Index}/{id?}"
+        name: "Admin",
+        areaName: "Admin",
+        pattern: "Admin/{controller=Home}/{action=Index}/{id?}"
         );
 
     endpoints.MapControllerRoute(
-        name:"default",
-        pattern:"{controller=Home}/{action=Index}/{id?}"
+        name: "default",
+        pattern: "{controller=Home}/{action=Index}/{id?}"
         );
 });
 

@@ -46,3 +46,15 @@ D:\dotnetmvcbootcamp\day-06\Entities\obj\Debug\net6.0\Entities.csproj.CoreCompil
 D:\dotnetmvcbootcamp\day-06\Entities\obj\Debug\net6.0\Entities.dll
 D:\dotnetmvcbootcamp\day-06\Entities\obj\Debug\net6.0\ref\Entities.dll
 D:\dotnetmvcbootcamp\day-06\Entities\obj\Debug\net6.0\Entities.pdb
+C:\Users\MMucahitNAS\Desktop\.Net\day-08\Entities\bin\Debug\net6.0\Entities.deps.json
+C:\Users\MMucahitNAS\Desktop\.Net\day-08\Entities\bin\Debug\net6.0\Entities.dll
+C:\Users\MMucahitNAS\Desktop\.Net\day-08\Entities\bin\Debug\net6.0\Entities.pdb
+C:\Users\MMucahitNAS\Desktop\.Net\day-08\Entities\obj\Debug\net6.0\Entities.csproj.AssemblyReference.cache
+C:\Users\MMucahitNAS\Desktop\.Net\day-08\Entities\obj\Debug\net6.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MMucahitNAS\Desktop\.Net\day-08\Entities\obj\Debug\net6.0\Entities.AssemblyInfoInputs.cache
+C:\Users\MMucahitNAS\Desktop\.Net\day-08\Entities\obj\Debug\net6.0\Entities.AssemblyInfo.cs
+C:\Users\MMucahitNAS\Desktop\.Net\day-08\Entities\obj\Debug\net6.0\Entities.csproj.CoreCompileInputs.cache
+C:\Users\MMucahitNAS\Desktop\.Net\day-08\Entities\obj\Debug\net6.0\Entities.dll
+C:\Users\MMucahitNAS\Desktop\.Net\day-08\Entities\obj\Debug\net6.0\refint\Entities.dll
+C:\Users\MMucahitNAS\Desktop\.Net\day-08\Entities\obj\Debug\net6.0\Entities.pdb
+C:\Users\MMucahitNAS\Desktop\.Net\day-08\Entities\obj\Debug\net6.0\ref\Entities.dll

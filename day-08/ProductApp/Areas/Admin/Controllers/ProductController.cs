@@ -4,25 +4,25 @@ using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Repositories.Contracts;
-using Repositories.EFCore;
+using Services.Contracts;
 
 namespace ProductApp.Areas.Admin.Controllers
 {
     [Area("Admin")]
     public class ProductController : Controller
     {
-        private readonly IRepositoryManager _manager;
-        private readonly IMapper _mapper;
+        private readonly IServiceManager _manager;
 
-        public ProductController(IRepositoryManager manager, IMapper mapper)
+        public ProductController(IServiceManager manager)
         {
-            _mapper = mapper;
             _manager = manager;
         }
 
         public IActionResult Index()
         {
-            var products = _manager.Product.GetAllProducts();
+            var products = _manager.ProductService.GetAllProductsWithDetail();
+            //var products = _manager.ProductService.GetAllProducts();
+
             TempData["info"] = "Products have been listed.";
             return View(products);
         }
@@ -30,8 +30,8 @@ namespace ProductApp.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult CreateOneProduct()
         {
-            var categories = _manager.Category.GetAllCategories();
-            ViewBag.Categories = new SelectList(categories,"CategoryId","CategoryName");
+            var categories = _manager.CategoryService.GetAllCategories();
+            ViewBag.Categories = new SelectList(categories, "CategoryId", "CategoryName");
             return View();
         }
 
@@ -39,13 +39,10 @@ namespace ProductApp.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult CreateOneProduct(ProductForInsertionDto productDto)
         {
-            var product = _mapper.Map<Product>(productDto);
-
             if (ModelState.IsValid)
             {
-                _manager.Product.Create(product);
-                _manager.Save();
-                
+                _manager.ProductService.Create(productDto);
+
                 TempData["success"] = "Product has been created";
                 return RedirectToAction("Index");
             }
@@ -56,23 +53,21 @@ namespace ProductApp.Areas.Admin.Controllers
         public IActionResult UpdateOneProduct(int id)
         {
             ViewBag.Categories =
-                new SelectList(_manager.Category.GetAllCategories(), 
+                new SelectList(_manager.CategoryService.GetAllCategories(),
                 "CategoryId", "CategoryName");
-            
-            var product = _manager.Product.GetOneProductById(id);
-            var productDto = _mapper.Map<ProductForUpdateDto>(product);
-            return View(productDto);
+
+            var product = _manager.ProductService.GetOneProductById(id);
+            var productTo = _manager.ProductService.ProductToDto(product);
+            return View(productTo);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult UpdateOneProduct(ProductForUpdateDto productDto)
         {
-            var product = _mapper.Map<Product>(productDto);
             if (ModelState.IsValid)
             {
-                _manager.Product.Update(product);
-                _manager.Save();
+                _manager.ProductService.Update(productDto);
                 return RedirectToAction("Index");
             }
             return View();
@@ -81,8 +76,7 @@ namespace ProductApp.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult DeleteOneProduct(int id)
         {
-            _manager.Product.Delete(new Product() { Id = id });
-            _manager.Save();
+            _manager.ProductService.Delete(id);
             return RedirectToAction("Index");
         }
 

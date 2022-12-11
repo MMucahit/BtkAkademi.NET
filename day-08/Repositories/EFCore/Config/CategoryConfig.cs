@@ -15,7 +15,7 @@ namespace Repositories.EFCore.Config
             builder.HasData(
                     new Category
                     {
-                        CategoryId=1,
+                        CategoryId = 1,
                         CategoryName = "Computer"
                     },
                     new Category

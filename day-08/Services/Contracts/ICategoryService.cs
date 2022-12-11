@@ -1,9 +1,4 @@
 ﻿using Entities.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Services.Contracts
 {
@@ -11,5 +6,8 @@ namespace Services.Contracts
     {
         IEnumerable<Category> GetAllCategories();
         Category GetOneCategoryById(int id);
+        Category Create(Category category);
+        Category Update(Category category);
+        Category Delete(int id);
     }
 }

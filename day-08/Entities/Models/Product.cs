@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace Entities.Models
+﻿namespace Entities.Models
 {
     public class Product
     {
@@ -13,7 +11,7 @@ namespace Entities.Models
 
         // Navigation property
         public int? CategoryId { get; set; }
-        public Category Category { get; set; }
+        public Category? Category { get; set; }
 
         public Product()
         {

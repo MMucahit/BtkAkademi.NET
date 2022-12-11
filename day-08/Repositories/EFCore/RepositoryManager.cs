@@ -1,9 +1,4 @@
 ﻿using Repositories.Contracts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Repositories.EFCore
 {
@@ -13,8 +8,8 @@ namespace Repositories.EFCore
         private IProductRepository _productRepository;
         private ICategoryRepository _categoryRepository;
 
-        public RepositoryManager(RepositoryContext context, 
-            IProductRepository productRepository, 
+        public RepositoryManager(RepositoryContext context,
+            IProductRepository productRepository,
             ICategoryRepository categoryRepository)
         {
             _context = context;
