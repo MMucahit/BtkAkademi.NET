@@ -1,0 +1,64 @@
+﻿@model List<Product>
+
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    table#alter tr:nth-child(even) {
+        background-color: #eee;
+    }
+
+    table#alter tr:nth-child(odd) {
+        background-color: #fff;
+    }
+
+    table#alter th {
+        color: white;
+        background-color: gray;
+    }
+</style>
+
+<div class="d-flex justify-content-center">
+    <form asp-area="Admin" asp-action="Add" asp-controller="Product" method="get">
+        <button class="btn btn-secondary" type="submit">Add</button>
+    </form>
+</div>
+
+<div class="d-flex justify-content-center">
+    <table border="1" cellpadding="5" cellspacing="5">
+        <tr>
+            <th>Delete</th>
+            <th>Update</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Description</th>
+        </tr>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>
+                    <form asp-area="Admin" asp-action="Delete" asp-controller="Product" method="post">
+                        <button class="btn btn-warning" type="submit">Delete</button>
+                        <input type="hidden" name="id" value="@product.Id">
+                    </form>
+                </td>
+                <td>
+                    <form asp-action="Update" asp-controller="Product" method="get">
+                        <button class="btn btn-secondary" type="submit">Update</button>
+                        <input type="hidden" name="id" value="@product.Id">
+                    </form>
+                </td>
+                <td>@product.Name</td>
+                <td>@product.Price</td>
+                <td>@product.Description</td>
+            </tr>
+        }
+    </table>
+</div>
+

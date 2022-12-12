@@ -1,0 +1,39 @@
+﻿@model List<Category>
+
+<div class="row">
+    <div class="col-md-3">
+        <form asp-area="" asp-action="Search" asp-controller="Category" method="post">
+            <div class="mb-3">
+                <label class="form-label">Search Term</label>
+                <input type="text" class="form-control" name="SearchTerm">
+            </div>
+            <div class="d-flex justify-content-center">
+                <form asp-area="" asp-action="Search" asp-controller="Category" method="post">
+                    <button class="btn btn-secondary" type="submit">Apply</button>
+                </form>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-9">
+        <div class="row ">
+            @foreach (var category in Model)
+            {
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="~/images/products/1.jpg" class="card-img-top" alt="...">
+
+                        <div class="card-body">
+                            <div>
+                                <div class="row">
+                                    <a asp-controller="Category" asp-action="GetOneCategory" asp-route-id=@category.CategoryId>@category.Name</a>
+                                </div>
+                                <div class="row text-danger">@category.Name</div>
+                                <div class="row text-danger">@category.Description</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

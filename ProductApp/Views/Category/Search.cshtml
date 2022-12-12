@@ -1,0 +1,22 @@
+﻿@model List<Category>
+
+<div class="row ">
+    @foreach (var category in Model)
+    {
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+                <img src="~/images/products/1.jpg" class="card-img-top" alt="...">
+
+                <div class="card-body">
+                    <div>
+                        <div class="row">
+                            <a asp-controller="Category" asp-action="GetOneCategory" asp-route-id=@category.CategoryId>@category.Name</a>
+                        </div>
+                        <div class="row text-danger">@category.Name</div>
+                        <div class="row text-danger">@category.Description</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
