@@ -2,11 +2,10 @@
 using Entities.Models;
 using Entities.RequestParameters;
 using Repositories.Abstracts;
-using System.Linq.Expressions;
 
 namespace Business.Concrete
 {
-    public class CategoryManager:ICategoryService
+    public class CategoryManager : ICategoryService
     {
         // Dependency Injection
         private readonly IRepositoryManager _categoryManager;

@@ -17,6 +17,10 @@ builder.Services.RegisterServices();
 builder.Services.AddAutoMapper(typeof(Program));
 //
 
+// Custom Extension
+builder.Services.ConfigureIdentity();
+//
+
 // IoC => builder.Services.Configuration olarak method haline getirdik.
 //builder.Services.AddDbContext<RepositoryContext>
 //    (options => options.UseSqlServer
@@ -38,6 +42,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.UseEndpoints(endpoints =>

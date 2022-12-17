@@ -1,7 +1,6 @@
 ﻿using Business.Abstracts;
 using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
-using Repositories.Abstracts;
 
 namespace ProductApp.Areas.Admin.Controllers
 {

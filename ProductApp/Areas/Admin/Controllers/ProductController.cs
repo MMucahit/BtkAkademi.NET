@@ -4,7 +4,6 @@ using Entities.DataTransferObjects;
 using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Repositories.Abstracts;
 
 namespace ProductApp.Areas.Admin.Controllers
 {
@@ -25,7 +24,8 @@ namespace ProductApp.Areas.Admin.Controllers
 
         public IActionResult Index()
         {
-            var result = _productManager.ProductService.GetAll();
+            var result = _productManager.ProductService.GetAllProductsWithDetail();
+            //var result = _productManager.ProductService.GetAll();
 
             TempData["list"] = "Products have been listed!";
 

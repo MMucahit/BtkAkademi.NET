@@ -13,6 +13,11 @@ namespace Repositories.EFCore.Config
             builder.Property(p => p.ImageUrl).HasDefaultValue("/images/products/default.jpg");
             builder.Property(p => p.AtCreated).HasDefaultValueSql("GETDATE()");
             builder.Property(p => p.Description).HasDefaultValue("...");
+            builder.HasOne(p => p.Category)
+                .WithMany(c => c.Products)
+                .HasForeignKey(p => p.CategoryId)
+                // Ürünlerde silinir. SetNull => ürünleri null yapar.
+                .OnDelete(DeleteBehavior.Cascade);
             builder.HasData(
                 new Product()
                 {

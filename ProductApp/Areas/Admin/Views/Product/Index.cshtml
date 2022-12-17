@@ -36,6 +36,7 @@
             <th>Delete</th>
             <th>Update</th>
             <th>Name</th>
+            <th>Category</th>
             <th>Price</th>
             <th>Description</th>
         </tr>
@@ -55,6 +56,7 @@
                     </form>
                 </td>
                 <td>@product.Name</td>
+                <td>@product?.Category?.Name</td>
                 <td>@product.Price</td>
                 <td>@product.Description</td>
             </tr>

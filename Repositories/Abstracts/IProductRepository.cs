@@ -7,5 +7,6 @@ namespace Repositories.Abstracts
     {
         List<Product> Search(ProductRequestParameters p);
         List<Product> CategoryDetail(int id);
+        List<Product> GeAllProductWithDetail();
     }
 }

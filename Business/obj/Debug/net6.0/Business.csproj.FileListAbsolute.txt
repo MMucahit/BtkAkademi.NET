@@ -32,3 +32,5 @@ C:\Users\MMucahitNAS\Desktop\Repo\Business\obj\Debug\net6.0\Business.dll
 C:\Users\MMucahitNAS\Desktop\Repo\Business\obj\Debug\net6.0\refint\Business.dll
 C:\Users\MMucahitNAS\Desktop\Repo\Business\obj\Debug\net6.0\Business.pdb
 C:\Users\MMucahitNAS\Desktop\Repo\Business\obj\Debug\net6.0\ref\Business.dll
+C:\Users\MMucahitNAS\Desktop\.Net\Business\bin\Debug\net6.0\Business.runtimeconfig.json
+C:\Users\MMucahitNAS\Desktop\.Net\Business\obj\Debug\net6.0\Business.genruntimeconfig.cache

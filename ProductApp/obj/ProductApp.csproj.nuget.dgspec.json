@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MMucahitNAS\\Desktop\\Repo\\ProductApp\\ProductApp.csproj": {}
+    "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\ProductApp\\ProductApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MMucahitNAS\\Desktop\\Repo\\Business\\Business.csproj": {
+    "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\Business\\Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MMucahitNAS\\Desktop\\Repo\\Business\\Business.csproj",
+        "projectUniqueName": "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\Business\\Business.csproj",
         "projectName": "Business",
-        "projectPath": "C:\\Users\\MMucahitNAS\\Desktop\\Repo\\Business\\Business.csproj",
+        "projectPath": "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\Business\\Business.csproj",
         "packagesPath": "C:\\Users\\MMucahitNAS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MMucahitNAS\\Desktop\\Repo\\Business\\obj\\",
+        "outputPath": "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\Business\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MMucahitNAS\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,11 +28,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\MMucahitNAS\\Desktop\\Repo\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\MMucahitNAS\\Desktop\\Repo\\Entities\\Entities.csproj"
+              "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\Entities\\Entities.csproj"
               },
-              "C:\\Users\\MMucahitNAS\\Desktop\\Repo\\Repositories\\Repositories.csproj": {
-                "projectPath": "C:\\Users\\MMucahitNAS\\Desktop\\Repo\\Repositories\\Repositories.csproj"
+              "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\Repositories\\Repositories.csproj": {
+                "projectPath": "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\Repositories\\Repositories.csproj"
               }
             }
           }
@@ -72,14 +72,14 @@
         }
       }
     },
-    "C:\\Users\\MMucahitNAS\\Desktop\\Repo\\Entities\\Entities.csproj": {
+    "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MMucahitNAS\\Desktop\\Repo\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\MMucahitNAS\\Desktop\\Repo\\Entities\\Entities.csproj",
+        "projectPath": "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\MMucahitNAS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MMucahitNAS\\Desktop\\Repo\\Entities\\obj\\",
+        "outputPath": "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MMucahitNAS\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -107,6 +107,16 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.11, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -127,14 +137,14 @@
         }
       }
     },
-    "C:\\Users\\MMucahitNAS\\Desktop\\Repo\\ProductApp\\ProductApp.csproj": {
+    "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\ProductApp\\ProductApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MMucahitNAS\\Desktop\\Repo\\ProductApp\\ProductApp.csproj",
+        "projectUniqueName": "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\ProductApp\\ProductApp.csproj",
         "projectName": "ProductApp",
-        "projectPath": "C:\\Users\\MMucahitNAS\\Desktop\\Repo\\ProductApp\\ProductApp.csproj",
+        "projectPath": "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\ProductApp\\ProductApp.csproj",
         "packagesPath": "C:\\Users\\MMucahitNAS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MMucahitNAS\\Desktop\\Repo\\ProductApp\\obj\\",
+        "outputPath": "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\ProductApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MMucahitNAS\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -151,14 +161,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\MMucahitNAS\\Desktop\\Repo\\Business\\Business.csproj": {
-                "projectPath": "C:\\Users\\MMucahitNAS\\Desktop\\Repo\\Business\\Business.csproj"
+              "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\Business\\Business.csproj": {
+                "projectPath": "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\Business\\Business.csproj"
               },
-              "C:\\Users\\MMucahitNAS\\Desktop\\Repo\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\MMucahitNAS\\Desktop\\Repo\\Entities\\Entities.csproj"
+              "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\Entities\\Entities.csproj"
               },
-              "C:\\Users\\MMucahitNAS\\Desktop\\Repo\\Repositories\\Repositories.csproj": {
-                "projectPath": "C:\\Users\\MMucahitNAS\\Desktop\\Repo\\Repositories\\Repositories.csproj"
+              "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\Repositories\\Repositories.csproj": {
+                "projectPath": "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\Repositories\\Repositories.csproj"
               }
             }
           }
@@ -181,7 +191,7 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.11, )"
+              "version": "[7.0.1, )"
             }
           },
           "imports": [
@@ -207,14 +217,14 @@
         }
       }
     },
-    "C:\\Users\\MMucahitNAS\\Desktop\\Repo\\Repositories\\Repositories.csproj": {
+    "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\Repositories\\Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MMucahitNAS\\Desktop\\Repo\\Repositories\\Repositories.csproj",
+        "projectUniqueName": "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\Repositories\\Repositories.csproj",
         "projectName": "Repositories",
-        "projectPath": "C:\\Users\\MMucahitNAS\\Desktop\\Repo\\Repositories\\Repositories.csproj",
+        "projectPath": "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\Repositories\\Repositories.csproj",
         "packagesPath": "C:\\Users\\MMucahitNAS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MMucahitNAS\\Desktop\\Repo\\Repositories\\obj\\",
+        "outputPath": "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\Repositories\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MMucahitNAS\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -231,8 +241,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\MMucahitNAS\\Desktop\\Repo\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\MMucahitNAS\\Desktop\\Repo\\Entities\\Entities.csproj"
+              "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\MMucahitNAS\\Desktop\\.Net\\Entities\\Entities.csproj"
               }
             }
           }
@@ -247,19 +257,29 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.11, )"
             },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[6.0.11, )"
+              "version": "[7.0.1, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.11, )"
+              "version": "[7.0.1, )"
             }
           },
           "imports": [

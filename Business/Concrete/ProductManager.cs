@@ -4,7 +4,6 @@ using Entities.DataTransferObjects;
 using Entities.Models;
 using Entities.RequestParameters;
 using Repositories.Abstracts;
-using System.Linq.Expressions;
 
 namespace Business.Concrete
 {
@@ -45,6 +44,11 @@ namespace Business.Concrete
         public List<Product> GetAll()
         {
             return _productManager.Product.GetAll();
+        }
+
+        public List<Product> GetAllProductsWithDetail()
+        {
+            return _productManager.Product.GeAllProductWithDetail();
         }
 
         public Product GetById(int id)

@@ -1,6 +1,5 @@
 ﻿using Entities.Models;
 using Entities.RequestParameters;
-using Repositories.Abstracts;
 
 namespace Business.Abstracts
 {

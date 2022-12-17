@@ -1,5 +1,6 @@
 ﻿using Entities.Models;
 using Entities.RequestParameters;
+using Microsoft.EntityFrameworkCore;
 using Repositories.Abstracts;
 using Repositories.EFCore.Extensions;
 
@@ -48,6 +49,11 @@ namespace Repositories.EFCore
             var deletedProduct = _context.Set<Product>().SingleOrDefault(p => p.Id == id);
             _context.Set<Product>().Remove(deletedProduct);
             _context.SaveChanges();
+        }
+
+        public List<Product> GeAllProductWithDetail()
+        {
+            return _context.Set<Product>().Include(p => p.Category).ToList();
         }
     }
 }

@@ -1,12 +1,12 @@
 ﻿using Entities.DataTransferObjects;
 using Entities.Models;
 using Entities.RequestParameters;
-using Repositories.Abstracts;
 
 namespace Business.Abstracts
 {
     public interface IProductService
     {
+        List<Product> GetAllProductsWithDetail();
         List<Product> Search(ProductRequestParameters p);
         List<Product> CategoryDetail(int id);
         List<Product> GetAll();
