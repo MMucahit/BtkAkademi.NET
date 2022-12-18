@@ -1,5 +1,6 @@
 ﻿using Entities.DataTransferObjects;
 using Entities.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Repositories.EFCore;
@@ -70,10 +71,13 @@ namespace ProductApp.Controllers
                 };
 
                 var result = await _userManager.CreateAsync(appUser, registerDto.Password);
-                //_userManager.AddToRoleAsync(appUser, "User");
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("Login");
+                    var rst = await _userManager.AddToRoleAsync(appUser, "User");
+                    if (rst.Succeeded)
+                    {
+                        return RedirectToAction("Login");
+                    }
                 }
                 else
                 {
@@ -90,6 +94,12 @@ namespace ProductApp.Controllers
         public IActionResult Register()
         {
             return View("Register");
+        }
+
+        public async Task<IActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Index","Home");
         }
     }
 }

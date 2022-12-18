@@ -1,6 +1,7 @@
 ﻿using Business.Abstracts;
 using Business.Concrete;
 using Entities.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Repositories.Abstracts;
@@ -45,6 +46,16 @@ namespace ProductApp.Extensions
                 options.Password.RequireLowercase = true;
                 options.Password.RequireNonAlphanumeric = true;
             }).AddEntityFrameworkStores<RepositoryContext>();
+        }
+
+        public static void ConfigureApplicationCookie(this IServiceCollection services)
+        {
+            services.ConfigureApplicationCookie(options =>{
+                options.LoginPath = new PathString("/Authentication/Login");
+                options.ReturnUrlParameter = CookieAuthenticationDefaults.ReturnUrlParameter;
+                options.ExpireTimeSpan= TimeSpan.FromMinutes(10);
+                options.AccessDeniedPath = new PathString("/Authentication/Login");
+            });  
         }
     }
 }

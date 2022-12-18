@@ -1,5 +1,6 @@
 ﻿using Business.Abstracts;
 using Entities.RequestParameters;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ProductApp.Controllers

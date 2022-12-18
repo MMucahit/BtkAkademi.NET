@@ -9,9 +9,9 @@ namespace Repositories.EFCore.Config
         public void Configure(EntityTypeBuilder<IdentityRole> builder)
         {
             builder.HasData(
-                new IdentityRole("user"),
-                new IdentityRole("editor"),
-                new IdentityRole("admin"));
+                new IdentityRole() { Name = "editor", NormalizedName = "EDITOR" },
+                new IdentityRole() { Name = "user", NormalizedName = "USER" },
+                new IdentityRole() { Name = "Admin", NormalizedName = "ADMIN" });
         }
     }
 }

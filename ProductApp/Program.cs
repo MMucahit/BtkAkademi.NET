@@ -21,6 +21,10 @@ builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.ConfigureIdentity();
 //
 
+// Custom Extension
+builder.Services.ConfigureApplicationCookie();
+//
+
 // IoC => builder.Services.Configuration olarak method haline getirdik.
 //builder.Services.AddDbContext<RepositoryContext>
 //    (options => options.UseSqlServer
