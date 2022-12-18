@@ -228,20 +228,20 @@ namespace Repositories.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "2bc363d3-c319-42bf-ba40-2654d47864b8",
-                            ConcurrencyStamp = "5f3882e4-05e9-4a91-b3f3-cd2731387858",
+                            Id = "41205e7c-5769-4c18-b5b6-fd8008d6e121",
+                            ConcurrencyStamp = "e4023b90-ab52-4b45-9b2a-d328711dfa19",
                             Name = "user"
                         },
                         new
                         {
-                            Id = "21246d08-e3b3-4f18-b27a-9a4a43947164",
-                            ConcurrencyStamp = "fa30e31b-c493-458c-97ad-09b2e8ab9254",
+                            Id = "cb6ffcc7-3e7e-42d0-b78c-a60d7c9e78b2",
+                            ConcurrencyStamp = "69295104-24c1-45ae-bdf3-39ee2f215a75",
                             Name = "editor"
                         },
                         new
                         {
-                            Id = "98457817-371a-4f59-aced-b6e9db30eaef",
-                            ConcurrencyStamp = "22d78b30-0ecc-4420-9fa5-e404a296877b",
+                            Id = "b480e309-eea9-4155-85d7-99a4d0b64351",
+                            ConcurrencyStamp = "53e2839a-5f3d-44f7-9533-e0637b2c39e1",
                             Name = "admin"
                         });
                 });

@@ -1,1 +1,18 @@
-﻿Login
+﻿@model LoginDto
+
+<form asp-action="Login" asp-controller="Authentication" method="post">
+    <div class="text-danger" asp-validation-summary="All"></div>
+    <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="text" class="form-control" asp-for="Email">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-control" asp-for="Password">
+    </div>
+
+    <button class="btn btn-primary" type="submit">
+        Login
+    </button>
+</form>
+
