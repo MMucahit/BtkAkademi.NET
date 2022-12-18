@@ -1,0 +1,73 @@
+﻿@model List<ApplicationUser>
+
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    table#alter tr:nth-child(even) {
+        background-color: #eee;
+    }
+
+    table#alter tr:nth-child(odd) {
+        background-color: #fff;
+    }
+
+    table#alter th {
+        color: white;
+        background-color: gray;
+    }
+</style>
+
+<div class="d-flex justify-content-center">
+    <form asp-area="Admin" asp-action="Add" asp-controller="User" method="get">
+        <button class="btn btn-secondary" type="submit">Add</button>
+    </form>
+</div>
+
+<div class="d-flex justify-content-center">
+    <table border="1" cellpadding="5" cellspacing="5">
+        <tr>
+            <th>Delete</th>
+            <th>Update</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>User Name</th>
+            <th>Email</th>
+            <th>Add Role</th>
+        </tr>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>
+                    <form asp-area="Admin" asp-action="Delete" asp-controller="User" method="post">
+                        <button class="btn btn-warning" type="submit">Delete</button>
+                        <input type="hidden" name="id" value="@user.Id">
+                    </form>
+                </td>
+                <td>
+                    <form asp-action="Update" asp-controller="User" method="get">
+                        <button class="btn btn-secondary" type="submit">Update</button>
+                        <input type="hidden" name="id" value="@user.Id">
+                    </form>
+                </td>
+                <td>@user.FirstName</td>
+                <td>@user.LastName</td>
+                <td>@user.UserName</td>
+                <td>@user.Email</td>
+                <td>
+                    <form asp-action="AddRole" asp-controller="User" method="get">
+                        <button class="btn btn-secondary" type="submit">Add Role</button>
+                        <input type="hidden" name="id" value="@user.UserName">
+                    </form>
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+

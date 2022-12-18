@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ProductApp.Areas.Admin.Controllers
 {
-    [Authorize]
+    [Authorize(Roles ="Admin,Editor")]
     [Area("Admin")]
     public class CategoryController : Controller
     {

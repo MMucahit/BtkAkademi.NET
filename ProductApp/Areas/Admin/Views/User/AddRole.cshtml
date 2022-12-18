@@ -1,0 +1,76 @@
+﻿@using Microsoft.AspNetCore.Identity
+@model ApplicationUser
+@inject UserManager<ApplicationUser> userManager
+
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    table#alter tr:nth-child(even) {
+        background-color: #eee;
+    }
+
+    table#alter tr:nth-child(odd) {
+        background-color: #fff;
+    }
+
+    table#alter th {
+        color: white;
+        background-color: gray;
+    }
+</style>
+
+<div class="row">
+    <div class="col-md-3">
+        <form asp-area="Admin" asp-action="AddRole" asp-controller="User" method="post">
+            <div class="form-group">
+                <input type="hidden" class="form-control" name="UserName" value="@Model.UserName" />
+                <select name="role" class="form-control" asp-items="@ViewBag.RolesList"></select>
+            </div>
+            <input type="submit" class="btn btn-primary" value="Add Role"></input>
+        </form>
+        <form asp-area="Admin" asp-action="DeleteRole" asp-controller="User" method="post">
+            <div class="form-group">
+                <input type="hidden" class="form-control" name="UserName" value="@Model.UserName" />
+                <select name="role" class="form-control" asp-items="@ViewBag.RolesList"></select>
+            </div>
+            <input type="submit" class="btn btn-danger" value="Delete Role"></input>
+        </form>
+    </div>
+    <div class="col-md-9">
+        <div class="row ">
+            <div class="d-flex justify-content-center">
+                <table border="1" cellpadding="5" cellspacing="5">
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>isActive</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">@Model.FirstName</td>
+                        <td rowspan="4">@Model.LastName</td>
+                        <td rowspan="4">@Model.Email</td>
+                    </tr>
+                    @foreach (var role in ViewBag.Roles)
+                    {
+                        <tr>
+                            <td>@role.ToString()</td>
+                            <td>@await userManager.IsInRoleAsync(Model,role.ToString())</td>
+                        </tr>
+                    }
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

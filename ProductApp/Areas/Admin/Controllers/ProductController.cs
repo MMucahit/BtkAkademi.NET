@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace ProductApp.Areas.Admin.Controllers
 {
-    [Authorize]
+    [Authorize(Roles ="Admin,Editor")]
     [Area("Admin")]
     public class ProductController : Controller
     {
